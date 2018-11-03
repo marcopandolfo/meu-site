@@ -1,0 +1,97 @@
+body{
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+legend,
+label[for="mensagem"] {
+    font-weight: bold;
+    margin-top: 1em;
+}
+label, button {
+	display: block;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    font-family: inherit;
+    font-size: 100%;
+    padding: .25em .5em;
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+}
+input:invalid {
+    box-shadow: 0 0 3px red;
+}
+input {
+	margin: 10px;
+}
+.titulo{
+	text-align: center;
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+	text-transform: uppercase;
+	font-size: 3em;
+	color: white;
+	background-color: #851944;
+	padding: 2rem;
+	border-bottom: .5rem solid #000;
+}
+.informe{
+	font-size: 1.8em;
+	text-align: center;
+	padding: 15px;
+}
+.formulario {
+	text-align: center;
+}
+.calcular{
+	border: 5px solid black;
+	background-color: #851944;
+	color: white;
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+    font-size: 1.3em;
+    padding: .5em 1em;
+}
+.calcular:hover{
+	box-shadow: 0 0 8px black;
+}
+.aa{
+	margin-top: 30px;
+}
+.align{
+	display: inline-block;
+	text-align: center;
+	margin-top: 30px;
+}
+.mostra{
+	margin-top: 10px;
+	font-size: 1.5em;
+}
+input:focus {
+    background-color: #FFD;
+}
+.calcular:hover{
+	transform: scale(1.1);
+}
+.voltar{
+	text-align: center;
+	margin-top: 50px;
+
+}
+.voltar a {
+	border: 5px solid black;
+	padding: .5em 1em;
+	font-size: 1.4em;
+	text-decoration: none;
+	background-color: #851944;
+	color: white;
+}
+.git a{
+	font-size: 1.2em
+}
+.git{
+	text-align: center;
+	margin-top: 55px;
+}
+.volt:hover{
+	box-shadow: 0 0 9px black;
+}

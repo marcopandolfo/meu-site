@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora de IMC</title>
+	<link rel="icon" href="imagens/favicon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/calcula-imc.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+</head>
+<body>
+	<main>
+		<h5 class="titulo">Calcula IMC</h1>
+			<div class="formulario">
+		<form class="form">
+			<fieldset>
+				<h2 class="informe">Informe Os Dados</h2>
+				<label>
+					Nome:
+					<input type="text" name="nome" placeholder="Insira seu nome" autofocus>
+				</label>
+				<label>
+					Altura:
+					<input type="text" name="altura" placeholder="Insira sua altura">
+				</label>
+
+				<label>
+					Peso:
+					<input type="text" name="peso" placeholder="Insira seu peso">
+				</label>
+
+				<div class="align"><button class="calcular"type="submit">Calcular !</button></div>
+
+			</fieldset>
+			<div class="aa"><span class="mostra"></span></div>
+		</form>
+	</div>
+	<div class="voltar"><a class="volt" href="index.html">Voltar Para Home</a></div>
+	</main>
+
+</body>
+</html>
+
+<script>
+	var botao = document.querySelector(".calcular");
+
+	botao.addEventListener("click", function(event){
+	event.preventDefault();
+
+	var form = document.querySelector("form");
+	var span = document.querySelector(".mostra");
+	var nome = 	form.nome.value;
+	var altura = form.altura.value;
+	var peso = form.peso.value;
+
+	var imc = Math.round((peso / (altura * altura)) *10 ) / 10;
+
+	if(imc < 18) {
+		span.textContent = nome + " Seu IMC é " + imc + ", Esta ABAIXO do Esperado.";
+	}else if(imc >=18 && imc <=25) {
+		span.textContent = nome + " Seu IMC é " + imc + ", Este é o IMC Ideal para você.";
+	}else if(imc > 25){
+		span.textContent = nome + " Seu IMC é " + imc + ", Seu IMC esta MAIOR do que o normal.";
+	}
+
+});
+
+</script>

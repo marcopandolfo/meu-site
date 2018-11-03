@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax com JS Puro</title>
+    <link href="assertsCep/asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/cepAjax.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="imagens/favicon.png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+</head>
+<body>
+    <form class="o-form">
+        <div class="o-navbar--gary">Buscando CEP com requisição AJAX</div>
+        <div class="o-form__body o-form__body--padding">
+            <div class="l-row">
+                <div class="u-grid--2">
+                    <label for="" class="o-form__text">CEP</label>
+                    <div class="o-form__group">
+                        <input class="o-form__data" name="cep" type="text">
+                        <span class="o-form__groupElement"><button class="o-button--gary"><i class="icon-globe"></i></button></span>
+                    </div>
+                </div>
+                <div class="u-grid--8">
+                    <label for="" class="o-form__text">Endereço</label>
+                    <input class="o-form__data" name="endereco" type="text">
+                </div>
+                <div class="u-grid--2">
+                    <label for="" class="o-form__text">Numero</label>
+                    <input class="o-form__data" name="numero" type="text">
+                </div>
+            </div>
+            <div class="l-row">
+                <div class="u-grid--8">
+                    <label for="" class="o-form__text">Bairro</label>
+                    <input class="o-form__data" name="bairro" type="text">
+                </div>
+                <div class="u-grid--4">
+                    <label for="" class="o-form__text">Complemento</label>
+                    <input class="o-form__data" name="complemento" type="text">
+                </div>
+            </div>
+            <div class="l-row">
+                <div class="u-grid--10">
+                    <label for="" class="o-form__text">Cidade</label>
+                    <input class="o-form__data" name="cidade" type="text">
+                </div>
+                <div class="u-grid--2">
+                    <label for="" class="o-form__text">Estado</label>
+                    <input class="o-form__data" name="estado" type="text">
+                </div>
+            </div>
+        </div>
+    </form>
+<script>
+
+    function buscaCep() {
+    event.preventDefault();
+    let inputCep = document.querySelector('input[name=cep]');
+    let cep = inputCep.value.replace('-', '');
+    let url = 'http://viacep.com.br/ws/' + cep + '/json';
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status = 200)
+                preencheCampos(JSON.parse(xhr.responseText));
+        }
+    }
+    xhr.send();
+}
+
+    function preencheCampos(json) {
+
+        document.querySelector('input[name=endereco]').value = json.logradouro;
+        document.querySelector('input[name=bairro]').value = json.bairro;
+        // document.querySelector('input[name=complemento]').value = json.complemento;
+        document.querySelector('input[name=cidade]').value = json.localidade;
+        document.querySelector('input[name=estado]').value = json.uf;
+}
+
+    let button = document.querySelector('button');
+    button.onclick = buscaCep;
+</script>
+    <div class="home">
+        <a class="homea" href="index.html">VoltarParaHome</a>
+    </div>
+</body>
+
+</html>

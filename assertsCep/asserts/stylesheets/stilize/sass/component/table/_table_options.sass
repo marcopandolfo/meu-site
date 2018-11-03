@@ -1,0 +1,19 @@
+.c-table
+    &--bordered
+        th, td
+            border: $border
+    &--zebrered
+        tbody
+            tr:nth-child(odd)
+                background: #FFFFFF
+            tr:nth-child(even)
+                background: #F9F9F9
+    &--hovered
+        tbody
+            tr:hover
+                background: #E6F3FF
+                cursor: pointer
+    &--reduced
+        font-size: .8rem
+        tbody td
+            font-size: .65rem

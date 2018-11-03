@@ -1,0 +1,66 @@
+main {
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+.titulo-principal {
+    text-align: center;
+    font-size: 3.9em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background-color: #851944;
+    padding: 2rem;
+    border-bottom: .5rem solid #000;
+}
+.imagem-principal img {
+
+    box-shadow: 0 0 0.2em #000;
+	width: 60%;
+}
+.imagem-principal {
+	display: block;
+	text-align: center;
+}
+.subtitulo {
+	padding: 20px;
+	font-size: 2em;
+	text-align: center;
+}
+.container {
+	padding: 10px;
+	line-height: 1.5em;
+	text-align: center;
+}
+.mini-titulo {
+	font-size: 1.2em;
+}
+.red {
+	color: red;
+}
+.download {
+	font-size: 1.3em;
+}
+.home {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.homa {
+	display: inline-block;
+	border: 5px solid black;
+   	padding: .5em 1em;
+    font-size: 1.6em;
+    text-decoration: none;
+    background-color: #851944;
+    color: white;
+}
+.downloada {
+	text-decoration: none;
+}
+.abaixar {
+	margin-top: 8px;
+}
+.homa:hover {
+	box-shadow: 0 0 11px black;
+}
+.downloada:hover {
+	color: red;
+}

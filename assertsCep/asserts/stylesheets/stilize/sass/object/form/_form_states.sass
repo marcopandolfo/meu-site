@@ -1,0 +1,11 @@
+.o-form
+    &__data
+        &.has-validation
+            &:invalid
+                @extend %invalid
+            &:valid:focus
+                @extend %valid
+        &[disabled], &[readonly], .is-inactive
+            @extend %is-inactive
+            border: $border
+            box-shadow: none

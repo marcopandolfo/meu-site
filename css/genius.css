@@ -1,0 +1,19 @@
+body {
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+.titulo-principal {
+    margin-bottom: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3.7em;
+    color: white;
+    background-color: #851944;
+    padding: 2rem;
+    border-bottom: .5rem solid #000;
+}
+main /*tirar*/ {
+    text-align: center;
+}
+body {
+    
+}

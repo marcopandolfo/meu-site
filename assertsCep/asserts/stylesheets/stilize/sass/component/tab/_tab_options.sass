@@ -1,0 +1,17 @@
+.c-tab
+    &--full        
+        @extend %flex-full
+        li
+            @extend %flex-full
+            .c-tab__item
+                border-radius: 0
+                text-align: center
+                width: 100%
+    &--bordered
+        & ~ .c-tab__group
+            @include border-radius(0 5px 5px 5px)
+            border: $border
+    &--reduced
+        li a
+            font-size: 1rem
+            padding: .77rem 1rem

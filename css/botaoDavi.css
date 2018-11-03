@@ -1,0 +1,55 @@
+.titulo-principal {
+    text-align: center;
+    font-size: 3.9em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background-color: #851944;
+    padding: 2rem;
+    border-bottom: .5rem solid #000;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+#botao {
+    padding: 30px;
+    float: left;
+    text-align: center;
+}
+.teste {
+    text-align: center;
+}
+#botao img{
+    cursor: pointer;
+}
+.imagem {
+    box-shadow: 0 0 4px black;
+    width: 420px;
+    height: 260px;
+}
+.imgbox {
+    padding-top: 4em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  .homebox{
+    text-align: center;
+}
+.home {
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+}
+.home:hover {
+    font-size: 1.2em;
+}
+main {
+    font-size: 1.1em;
+    font-family: 'Oswald', sans-serif;
+}

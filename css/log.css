@@ -1,0 +1,18 @@
+html{
+	text-align: center;
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+.temp{
+	margin-top: 220px;
+	font-size: 8em;
+	animation: rodar 4s linear infinite alternate;
+	transform-origin: center;
+
+}
+@keyframes rodar {
+    from {
+    }
+    to {
+        transform: scale(5);
+    }
+}

@@ -1,0 +1,73 @@
+input {
+	height: 25px;
+	background-color: rgb(255, 246, 10, .4);
+}
+body{
+	background-color: #99e6d4
+}
+.adivinha{
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+	text-align: center;
+	margin-top: 30px;
+	font-size: 1.2em;
+
+}
+.botao{
+	border: 3px solid black;
+	padding: .5em 1em;
+	background-color: #295420;
+	color: white;
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+	font-size: 0.7em;
+}
+.botao:hover {
+	box-shadow: 0 0 8px black;
+}
+.invisivel{
+	display: none;
+}
+.visivel{
+	display: inline-block;
+}
+.titulo2{
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+	font-size: 2.5em;
+	text-align: center;
+	margin-top: 39px;
+}
+.titulo-principal{
+	font-size: 3em;
+	text-transform: uppercase;
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+	background-color: #2d5d51;
+}
+.span{
+	font-size: 1.32em;
+}
+.instructions{
+	text-align: center;
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+	color: #760CE8;
+	margin-top: 40px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+span {
+	transition: 1s;
+}
+.home{
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #295420;
+	color: white;
+	padding: 15px;
+	border: 3px solid black;
+	font-size: 1em;
+	text-align: center;
+}
+.home:hover{
+	box-shadow: 0 0 8px black;
+}
+.botao:hover{
+	transform: scale(1.1);
+}

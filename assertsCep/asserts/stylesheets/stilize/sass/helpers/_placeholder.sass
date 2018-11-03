@@ -1,0 +1,68 @@
+@import variable/z_index
+@import mixin
+
+%align-center
+    @include transform("translate(-50%, -50%)")
+    left: 50%
+    position: absolute
+    top: 50%
+
+%flex-full
+    @include display-flex
+    width: 100%
+
+%float-full
+    float: left
+    width: 100%
+
+%fixed-bottom
+    position: fixed
+    bottom: 0
+    z-index: $zindex-fixed-bottom
+
+%fixed-bottom-full
+    @extend %fixed-bottom
+    width: 100%
+
+%fixed-top
+    position: fixed
+    top: 0
+    z-index: $zindex-fixed-top
+
+%fixed-top-full
+    @extend %fixed-top
+    width: 100%
+
+%inline-full
+    display: inline-block
+    width: 100%
+
+%invalid
+    background: rgba(255, 179 ,179 , .25)
+    border: 1px solid #FF8080 
+    box-shadow: 0 0 3px 1px rgba(255, 128 ,128 , .3)
+
+%is-inactive
+    background: $background-inactive !important
+    color: $color-inactive !important
+    pointer-events: none
+
+%is-disabled
+    @extend %is-inactive
+
+%position-bottom
+    position: absolute
+    bottom: 0
+
+%position-left
+    position: absolute
+    left: 0
+
+%transparent
+    border: none
+    background: transparent
+
+%valid
+    background: rgba(92, 214, 92 , .25)
+    border: 1px solid #00CC99
+    box-shadow: 0 0 3px 1px rgba(0, 204, 153 , .25)

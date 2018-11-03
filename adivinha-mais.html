@@ -1,0 +1,122 @@
+<head>
+	<meta charset="utf-8">
+	<title>Adivinha</title>
+	<link rel="icon" href="imagens/favicon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/adivinha-mais.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+</head>
+
+<body>
+<h4 class="titulo-principal">Jogo do Adivinha</h1>
+
+<div class="adivinha">
+	<label>
+		Chute Seu Numero
+		<input type="text">
+		<button class="botao">Verificar</button>
+		<br>
+	</label>
+	<span class="span"></span>
+</div>
+
+<div class="instructions">
+		<span class="two">Chute Numeros de 1 a 10</span>
+		<br>
+		<br>
+		<br>
+		<span class="one">O jogo funciona com o JavaScript gerando um numero aleatorio de 1 a 10 atraves do comando "Math.radom" que gera um numero de 1 a 10, depois disso capturamos o valor que o usuario colocou no "input" e comparamos com o  valor que o JavaScript gerou e dependendo do resultado executamos tal comando.</span>
+		<br>
+		<br>
+		<br>
+		<br>
+		<a class="home" href="index.html">voltar para home</a>
+
+</div>
+</body>
+<script>
+
+	function sorteia() {
+
+		return Math.round(Math.random() * 10);
+	}
+
+
+	function sorteiaNumeros(quantidade) {
+
+		var segredos = [];
+
+		var numero = 1;
+
+		while(numero <= quantidade){
+
+			var numeroAleatorio = sorteia();
+
+			if(numeroAleatorio !== 0 ) {
+
+				var achou = false;
+
+
+			for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+				if(segredos[posicao] == numeroAleatorio){
+					achou = true;
+					break;
+				}
+			}
+
+			if(achou == false) {
+			 	segredos.push(numeroAleatorio);
+			 	numero++;
+			} 
+
+			}
+
+		}
+
+		return segredos;
+	}
+
+	var segredos = sorteiaNumeros(1); //mudar aqui a qntd de numeros gerados
+
+	
+	var input = document.querySelector("input");
+	input.focus();
+
+	function verifica() {
+		var achou = false;
+
+		for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+			if(input.value == segredos[posicao]) {
+ 
+				var span = document.querySelector(".span");
+				span.textContent = "Você Acertou !"
+				span.style.color = "green";
+				achou = true;
+				break;
+			}
+
+		}
+
+		if(achou == false) {
+			var span = document.querySelector(".span");
+			span.textContent = "Você Errou !"
+			span.style.color = "red";
+		}
+		
+
+
+
+		input.value = "";
+		input.focus();
+
+	}
+
+	var button = document.querySelector("button");
+
+	button.onclick = verifica;
+	
+</script>
