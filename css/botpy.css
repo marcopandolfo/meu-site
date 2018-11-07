@@ -43,7 +43,7 @@ main {
 	margin-bottom: 30px;
 	text-align: center;
 }
-.homa {
+.home a {
 	display: inline-block;
 	border: 5px solid black;
    	padding: .5em 1em;
@@ -55,10 +55,10 @@ main {
 .downloada {
 	text-decoration: none;
 }
-.abaixar {
+.hbaixar {
 	margin-top: 8px;
 }
-.homa:hover {
+.home a:hover {
 	box-shadow: 0 0 11px black;
 }
 .downloada:hover {

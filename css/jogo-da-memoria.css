@@ -56,3 +56,9 @@ main {
 .fto-principal {
 	margin-top: 2.3em;
 }
+.download a:hover {
+	color: red;
+}
+.home {
+	margin-bottom: 50px;
+}
