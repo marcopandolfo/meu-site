@@ -11,9 +11,38 @@ body {
     padding: 2rem;
     border-bottom: .5rem solid #000;
 }
-main /*tirar*/ {
+.container {
     text-align: center;
+    margin-top: 2.3em;
 }
-body {
-    
+.sub-titulo {
+    font-size: 1.7em;
+    margin-top: 18px;
+    margin-bottom: 15px;
+}
+.box-download a {
+    font-size: 1.3em;
+    text-decoration: none;
+}
+.home a {
+    display: inline-block;
+    border: 5px solid black;
+    padding: .5em 1em;
+    font-size: 1.6em;
+    text-decoration: none;
+    background-color: #851944;
+    color: white;
+}
+.box-download {
+    margin-top: 1px;
+    margin-bottom: 16px;
+}
+.home a:hover {
+    box-shadow: 0 0 11px black;
+}
+.home {
+    margin-bottom: 25px;
+}
+.box-download a:hover {
+    color:  red;
 }
